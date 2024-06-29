@@ -6,7 +6,7 @@ This repository contains a multi-stage pipeline for the analysis of histopatholo
 
 ![image](https://github.com/Haricharan0311/Hepatoma-Staging-Project/assets/49089160/6c2a176d-49e5-4100-ae73-f70bd834ccd2)
 
-[HCC_G1_16_Poster_cropped.pdf](https://github.com/user-attachments/files/16040129/HCC_G1_16_Poster_cropped.pdf)
+[HCC_Poster.pdf](https://github.com/user-attachments/files/16040129/HCC_G1_16_Poster_cropped.pdf)
 
 ## Table of Contents
 
