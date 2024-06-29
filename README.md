@@ -1,8 +1,8 @@
-# Hepatoma-Staging-Project
-
-# Hepatoma Analysis Pipeline
+# Advancing HCC Prognosis: A Comprehensive Framework for Improved Patient Outcomes
 
 This repository contains a multi-stage pipeline for the analysis of histopathological images of hepatoma. The pipeline includes stain color normalization, nuclei mask segmentation, feature extraction, and prognosis prediction.
+
+# Hepatoma Analysis Pipeline
 
 ![image](https://github.com/Haricharan0311/Hepatoma-Staging-Project/assets/49089160/6c2a176d-49e5-4100-ae73-f70bd834ccd2)
 
