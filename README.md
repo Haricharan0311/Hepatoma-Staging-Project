@@ -1,6 +1,6 @@
 # Advancing HCC Prognosis: A Comprehensive Framework for Improved Patient Outcomes
 
-This repository contains a multi-stage pipeline for the analysis of histopathological images of hepatoma. The pipeline includes stain color normalization, nuclei mask segmentation, feature extraction, and prognosis prediction.
+This repository contains a multi-stage pipeline for the analysis of Hematoxylin and eosin stained (H&E) histopathological images of hepatoma. The pipeline includes stain color normalization, nuclei mask segmentation, feature extraction, and prognosis prediction.
 
 # Hepatoma Analysis Pipeline
 
@@ -14,7 +14,7 @@ This repository contains a multi-stage pipeline for the analysis of histopatholo
 - [Stage I: Stain Colour Normalisation and Segmentation](#stage-i-stain-colour-normalisation-and-segmentation)
 - [Stage II: Feature Extraction and Analysis](#stage-ii-feature-extraction-and-analysis)
 - [Requirements](#requirements)
-
+- [Key Highlights](#key-highlights)
 
 ## Overview
 
@@ -51,4 +51,29 @@ Pass the obtained database file to Cell Profiler Analyst, which will produce an 
 - Cell Profiler
 - Cell Profiler Analyst
 
+## Key Highlights
+
+### Class Imbalance Handling
+- **ADASYN Data Augmentation**: We address the class imbalance, particularly the scarcity of images in advanced cancer stages, using Adaptive Synthetic Sampling (ADASYN). This method was chosen over SMOTE for its better sensitivity score, crucial for medical staging and imaging tasks.
+
+### Stain Color Normalization
+- **Deconvolution Stain Color Normalization**: Applied to generalize the pipeline to various staining methods. This step enhances the generalization of the UNet model for generating nuclei segmented masks.
+
+### Feature Extraction
+Using the segmented masks, we extract quantifiable features with Cell Profiler and Cell Profiler Analyst:
+1. **Total Cell Count**: The total number of cells in each image.
+2. **Average Cell Area**: The mean area of segmented cells within each image.
+3. **Spatial Variance in X and Y Coordinates**: The variance in the spatial distribution of cell centroids along the X and Y axes.
+4. **Coefficient of Variation (CV) of Cell Area**: Standard deviation of cell areas divided by the mean cell area, indicating variability in cell sizes.
+5. **Cell Density**: The sum of the areas of all segmented cells within each image.
+6. **Perimeter-to-Area Ratio**: The ratio of the sum of cell perimeters to the total cell area, indicating cell shape complexity.
+7. **Compactness Variation**: Standard deviation of cell eccentricities divided by the mean eccentricity, quantifying variation in cell compactness.
+8. **Normalized Cell Roundness (NCR)**: Sum of major axis lengths of cells, providing a measure of cell roundness.
+9. **Feret’s Diameter Variation**: Standard deviation of Feret diameters divided by the mean Feret diameter, assessing variability in cell elongation.
+
+### Results and Insights - Machine Learning Models
+- **Model Performance**: Various machine learning models were trained on the extracted features, achieving a peak test accuracy of 74.45%.
+- **Feature Impact**: Adding image moments (Central Moments, Normalized Moments, Zernike Moments) as metrics decreased model performance. This is attributed to the large number of cells per image, making aggregate moment values less useful for distinguishing HCC stages.
+
+Feel free to reach out if you have any questions or need further assistance with the project!
 
