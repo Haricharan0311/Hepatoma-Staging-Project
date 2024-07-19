@@ -1,6 +1,6 @@
 # Advancing HCC Prognosis: A Comprehensive Framework for Improved Patient Outcomes
 
-This repository contains a multi-stage pipeline for the analysis of Hematoxylin and eosin stained (H&E) histopathological images of hepatoma. The pipeline includes stain color normalization, nuclei mask segmentation, feature extraction, and prognosis prediction.
+This repository contains a multi-stage pipeline for the analysis of Hematoxylin and eosin stained (H&E) histopathological images of hepatocellular carcinoma. The pipeline includes stain color normalization, nuclei mask segmentation, feature extraction, and prognosis prediction.
 
 # Hepatoma Analysis Pipeline
 
